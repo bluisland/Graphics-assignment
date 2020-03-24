@@ -23,11 +23,19 @@
 <script>
     var canvas = document.getElementById('canvas')
     var ctx = canvas.getContext('2d')
-
     初始化(canvas, ctx)
-    for (var k = 0; k < 30; k++)
-        for (var i = 0; i < 30; i++)
-            画圆(ctx, 10 * i * 2 + 10, 10 * k * 2 + 10, 10, '#000000')
+
+    var arr = [
+        [1, 1, 1],
+        [0, 1, 1],
+        [0, 0, 1],
+    ]
+    var 宽 = arr[0].length
+    var 高 = arr.length
+
+    for (var k = 0; k < 高; k++)
+        for (var i = 0; i < 宽; i++)
+            画圆(ctx, 10 * i * 2 + 10, 10 * k * 2 + 10, 10, arr[k][i] == 0 ? '#FFFFFF' : '#000000')
 </script>
 
 </html>
