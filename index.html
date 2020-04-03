@@ -19,11 +19,22 @@
         ctx.fillStyle = 颜色
         ctx.fill()
     }
+    function 直线(x0,y0,x1,y1){
+        k = (y1-y0)/(x1-x0)
+        b = y1 - k*x1
+    }
+    function 椭圆(ctx, x0,y0,a,b,){
+
+    }
 </script>
 <script>
     var canvas = document.getElementById('canvas')
     var ctx = canvas.getContext('2d')
     初始化(canvas, ctx)
+
+    
+
+
 
     var arr = [
         [1, 1, 1],
